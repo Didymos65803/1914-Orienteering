@@ -33,7 +33,7 @@ VITE_FIREBASE_STORAGE_BUCKET=
 VITE_FIREBASE_MESSAGING_SENDER_ID=
 VITE_FIREBASE_APP_ID=
 VITE_ADMIN_PASSWORD=
-VITE_BASE_PATH=/huashan-archive-run/
+VITE_BASE_PATH=/1914-Orienteering/
 ```
 
 Firebase 前端 config 可以公開，但不要放入 service account key、Google 私鑰或任何伺服器憑證。`VITE_ADMIN_PASSWORD` 只是 MVP 的前端密碼門，不是強安全機制；正式活動若有高風險操作，建議改成 Firebase Custom Claims 或獨立後端。
@@ -57,7 +57,7 @@ Firebase 前端 config 可以公開，但不要放入 service account key、Goog
 - `/vote`
 - `/admin`
 
-GitHub Pages 預設 base path 是 `/huashan-archive-run/`。若 repo 名稱不同，設定 `VITE_BASE_PATH=/your-repo-name/`。
+GitHub Pages base path 需對應 repo 名稱；目前 remote 是 `1914-Orienteering`，所以使用 `VITE_BASE_PATH=/1914-Orienteering/`。若 repo 名稱不同，設定 `VITE_BASE_PATH=/your-repo-name/`。
 
 ## QR Code
 
@@ -75,7 +75,7 @@ QR code 目標請使用部署後網址加上以下路徑：
 GitHub Pages 範例：
 
 ```text
-https://<你的帳號>.github.io/huashan-archive-run/checkpoint/CP1
+https://<你的帳號>.github.io/1914-Orienteering/checkpoint/CP1
 ```
 
 build 後會複製 `index.html` 為 `404.html`，讓 GitHub Pages 直接開啟上述 SPA 路徑時仍能載入 React app。

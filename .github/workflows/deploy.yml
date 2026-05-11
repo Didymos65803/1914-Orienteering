@@ -32,6 +32,16 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_FIREBASE_API_KEY: AIzaSyAVWWv4WBxzsIipS8i9DqrBCMiwdTSnX-Q
+          VITE_FIREBASE_AUTH_DOMAIN: orienteering-46557.firebaseapp.com
+          VITE_FIREBASE_DATABASE_URL: https://orienteering-46557-default-rtdb.asia-southeast1.firebasedatabase.app
+          VITE_FIREBASE_PROJECT_ID: orienteering-46557
+          VITE_FIREBASE_STORAGE_BUCKET: orienteering-46557.firebasestorage.app
+          VITE_FIREBASE_MESSAGING_SENDER_ID: "1072898033034"
+          VITE_FIREBASE_APP_ID: "1:1072898033034:web:2643df2ca5800c40a93473"
+          VITE_ADMIN_PASSWORD: ${{ secrets.VITE_ADMIN_PASSWORD }}
+          VITE_BASE_PATH: /1914-Orienteering/
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
