@@ -1,0 +1,105 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "game": {
+      "status": {
+        ".validate": "newData.isString() && newData.val().matches(/^(waiting|running|ended)$/)"
+      },
+      "startedAt": {
+        ".validate": "newData.val() === null || newData.isNumber()"
+      },
+      "endsAt": {
+        ".validate": "newData.val() === null || newData.isNumber()"
+      },
+      "durationMinutes": {
+        ".validate": "newData.isNumber() && newData.val() >= 1 && newData.val() <= 180"
+      },
+      "repairRate": {
+        ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 1"
+      }
+    },
+    "teams": {
+      "$teamId": {
+        ".validate": "$teamId.matches(/^[A-H]$/)",
+        "code": {
+          ".validate": "newData.isString()"
+        },
+        "role": {
+          ".validate": "newData.isString() && newData.val().matches(/^(repair|overwrite)$/)"
+        },
+        "route": {
+          ".validate": "newData.hasChildren(['0','1','2','3','4','5'])"
+        },
+        "currentIndex": {
+          ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 6"
+        },
+        "score": {
+          ".validate": "newData.isNumber()"
+        },
+        "skillUsed": {
+          ".validate": "newData.isBoolean()"
+        },
+        "finished": {
+          ".validate": "newData.isBoolean()"
+        },
+        "uid": {
+          ".validate": "newData.val() === null || newData.isString()"
+        },
+        "lastSeenAt": {
+          ".validate": "newData.val() === null || newData.isNumber()"
+        }
+      }
+    },
+    "checkpoints": {
+      "$cpId": {
+        ".validate": "$cpId.matches(/^CP[1-6]$/)",
+        "name": {
+          ".validate": "newData.isString()"
+        },
+        "polluted": {
+          ".validate": "newData.isBoolean()"
+        },
+        "pollutedBy": {
+          ".validate": "newData.val() === null || newData.val().matches(/^[A-H]$/)"
+        },
+        "pollutedAt": {
+          ".validate": "newData.val() === null || newData.isNumber()"
+        }
+      }
+    },
+    "answers": {
+      "$teamId": {
+        ".validate": "$teamId.matches(/^[A-H]$/)",
+        "$cpId": {
+          ".validate": "$cpId.matches(/^CP[1-6]$/) && newData.hasChildren(['answer','correct','scoreDelta','submittedAt','wasPolluted'])"
+        }
+      }
+    },
+    "votes": {
+      "$teamId": {
+        ".validate": "$teamId.matches(/^[A-H]$/) && newData.hasChildren(['votedFor','submittedAt'])",
+        "votedFor": {
+          ".validate": "newData.isString() && newData.val().matches(/^[A-H]$/)"
+        },
+        "submittedAt": {
+          ".validate": "newData.isNumber()"
+        }
+      }
+    },
+    "logs": {
+      "$logId": {
+        ".validate": "newData.hasChildren(['timestamp','teamId','action'])",
+        "timestamp": {
+          ".validate": "newData.isNumber()"
+        },
+        "teamId": {
+          ".validate": "newData.val() === null || newData.val() === 'admin' || newData.val().matches(/^[A-H]$/)"
+        },
+        "action": {
+          ".validate": "newData.isString()"
+        }
+      }
+    }
+  }
+}

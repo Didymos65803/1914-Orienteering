@@ -1,0 +1,44 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#eef3f6"/>
+  <path d="M88 156H1112V744H88V156Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="4"/>
+  <path d="M180 250H1018" stroke="#94a3b8" stroke-width="20" stroke-linecap="round"/>
+  <path d="M190 650H1000" stroke="#94a3b8" stroke-width="18" stroke-linecap="round"/>
+  <path d="M282 204V704" stroke="#94a3b8" stroke-width="18" stroke-linecap="round"/>
+  <path d="M588 204V704" stroke="#94a3b8" stroke-width="18" stroke-linecap="round"/>
+  <path d="M908 204V704" stroke="#94a3b8" stroke-width="18" stroke-linecap="round"/>
+  <rect x="336" y="306" width="190" height="126" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="4"/>
+  <rect x="664" y="302" width="168" height="182" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="4"/>
+  <rect x="350" y="520" width="210" height="92" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="4"/>
+  <path d="M156 156L88 156V224" stroke="#147a73" stroke-width="10" stroke-linecap="round"/>
+  <path d="M1044 744H1112V676" stroke="#147a73" stroke-width="10" stroke-linecap="round"/>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700">
+    <text x="120" y="112" font-size="44" fill="#0f172a">華山 1914 定向地圖示意</text>
+    <text x="120" y="804" font-size="30" fill="#475569">現場請以實際地圖、路線與工作人員指示為準</text>
+  </g>
+  <g>
+    <circle cx="242" cy="250" r="34" fill="#147a73"/>
+    <text x="242" y="261" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#fff">1</text>
+  </g>
+  <g>
+    <circle cx="588" cy="250" r="34" fill="#147a73"/>
+    <text x="588" y="261" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#fff">2</text>
+  </g>
+  <g>
+    <circle cx="908" cy="250" r="34" fill="#147a73"/>
+    <text x="908" y="261" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#fff">3</text>
+  </g>
+  <g>
+    <circle cx="282" cy="650" r="34" fill="#147a73"/>
+    <text x="282" y="661" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#fff">4</text>
+  </g>
+  <g>
+    <circle cx="588" cy="650" r="34" fill="#147a73"/>
+    <text x="588" y="661" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#fff">5</text>
+  </g>
+  <g>
+    <circle cx="908" cy="650" r="34" fill="#147a73"/>
+    <text x="908" y="661" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#fff">6</text>
+  </g>
+  <path d="M832 342L902 280L972 342" stroke="#0f172a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="902" y="392" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#0f172a">高塔方向</text>
+</svg>

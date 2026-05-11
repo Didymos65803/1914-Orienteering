@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #0f172a;
+  background: #f6f8fb;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f6f8fb;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+}
+
+@layer components {
+  .page-shell {
+    @apply mx-auto flex min-h-screen w-full max-w-3xl flex-col gap-5 px-4 py-5 text-slate-900 sm:px-6 sm:py-8;
+  }
+
+  .admin-shell {
+    @apply mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-6 px-5 py-6 text-slate-900;
+  }
+
+  .panel {
+    @apply rounded-lg border border-slate-200 bg-white p-5 shadow-sm sm:p-6;
+  }
+
+  .admin-section {
+    @apply rounded-lg border border-slate-200 bg-white p-5 shadow-sm;
+  }
+
+  .admin-section h2 {
+    @apply mb-3 text-2xl font-bold text-slate-950;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .danger-button {
+    @apply inline-flex min-h-14 items-center justify-center gap-3 rounded-lg px-5 py-3 text-lg font-bold transition focus:outline-none focus:ring-4 focus:ring-teal-200 disabled:opacity-50;
+  }
+
+  .primary-button {
+    @apply bg-accent text-white hover:bg-teal-800;
+  }
+
+  .secondary-button {
+    @apply border border-slate-300 bg-white text-slate-950 hover:bg-slate-100;
+  }
+
+  .danger-button {
+    @apply border border-red-200 bg-red-600 text-white hover:bg-red-700;
+  }
+
+  .small-button {
+    @apply rounded-md border border-slate-300 bg-white px-3 py-2 text-sm font-bold text-slate-900 hover:bg-slate-100;
+  }
+
+  .icon-button {
+    @apply inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-slate-300 bg-white text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-4 focus:ring-teal-200;
+  }
+
+  .icon-button-sm {
+    @apply inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-slate-300 bg-white text-slate-900 hover:bg-slate-100 disabled:opacity-40;
+  }
+
+  .text-input {
+    @apply min-h-14 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-lg text-slate-950 outline-none focus:border-accent focus:ring-4 focus:ring-teal-100;
+  }
+
+  .stat-card {
+    @apply flex min-h-24 flex-col justify-between rounded-lg border border-slate-200 bg-white p-4 shadow-sm;
+  }
+
+  .stat-card span {
+    @apply text-base font-semibold text-slate-600;
+  }
+
+  .stat-card strong {
+    @apply mt-2 text-3xl font-bold text-slate-950;
+  }
+
+  .answer-option {
+    @apply flex min-h-14 w-full items-center gap-3 rounded-lg border border-slate-300 bg-white px-4 py-3 text-left text-lg font-semibold text-slate-900 hover:bg-slate-50 disabled:opacity-50;
+  }
+
+  .answer-option-selected {
+    @apply border-accent bg-teal-50;
+  }
+
+  .checkpoint-choice {
+    @apply flex min-h-28 flex-col items-start justify-between rounded-lg border border-slate-300 bg-white p-4 text-left text-base font-semibold text-slate-800 hover:bg-slate-50;
+  }
+
+  .checkpoint-choice-selected {
+    @apply border-accent bg-teal-50;
+  }
+
+  .team-vote-button {
+    @apply min-h-20 rounded-lg border border-slate-300 bg-white px-4 py-3 text-xl font-bold text-slate-900 hover:bg-slate-50 disabled:opacity-50;
+  }
+
+  .team-vote-button-selected {
+    @apply border-accent bg-teal-50 text-accent;
+  }
+
+  .back-link {
+    @apply inline-flex items-center gap-2 text-lg font-bold text-accent;
+  }
+
+  .table-wrap {
+    @apply w-full overflow-x-auto;
+  }
+
+  table {
+    @apply w-full min-w-[760px] border-collapse text-left text-sm;
+  }
+
+  th {
+    @apply border-b border-slate-200 bg-slate-50 px-3 py-3 font-bold text-slate-700;
+  }
+
+  td {
+    @apply border-b border-slate-100 px-3 py-3 text-slate-800;
+  }
+
+  .score-row {
+    @apply flex min-h-12 items-center justify-between gap-4 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-lg;
+  }
+}
